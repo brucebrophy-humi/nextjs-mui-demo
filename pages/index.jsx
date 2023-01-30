@@ -3,11 +3,11 @@ import { Container } from "@mui/system";
 import Head from "next/head";
 import Link from "next/link";
 
-const Item = () => {
+const Item = ({ children }) => {
   return (
-    <div
-      style={{ width: "100%", height: "200px", background: "#1a2027" }}
-    ></div>
+    <div style={{ width: "100%", height: "200px", background: "#1a2027" }}>
+      {children}
+    </div>
   );
 };
 
@@ -31,48 +31,52 @@ export default function Home() {
               <Link href="/forms">
                 <Button variant="contained">Forms</Button>
               </Link>
+              <Link href="/cards" style={{ marginLeft: "8px" }}>
+                <Button variant="contained">Cards</Button>
+              </Link>
             </Grid>
             <Grid item xs={12}>
-              <Item>xs=6 md=8</Item>
+              <Item />
             </Grid>
 
             <Grid item xs={12} lg={6}>
-              <Item>xs=6 md=8</Item>
+              <Item />
             </Grid>
+
             <Grid item xs={12} lg={6}>
-              <Item>xs=6 md=4</Item>
+              <Item />
             </Grid>
 
             <Grid item xs={6} lg={3}>
-              <Item>xs=6 md=8</Item>
+              <Item />
             </Grid>
             <Grid item xs={6} lg={3}>
-              <Item>xs=6 md=4</Item>
+              <Item />
             </Grid>
             <Grid item xs={6} lg={3}>
-              <Item>xs=6 md=4</Item>
+              <Item />
             </Grid>
             <Grid item xs={6} lg={3}>
-              <Item>xs=6 md=8</Item>
+              <Item />
             </Grid>
 
             <Grid item xs={6} lg={2}>
-              <Item>xs=6 md=4</Item>
+              <Item />
             </Grid>
             <Grid item xs={6} lg={2}>
-              <Item>xs=6 md=8</Item>
+              <Item />
             </Grid>
             <Grid item xs={6} lg={2}>
-              <Item>xs=6 md=8</Item>
+              <Item />
             </Grid>
             <Grid item xs={6} lg={2}>
-              <Item>xs=6 md=8</Item>
+              <Item />
             </Grid>
             <Grid item xs={6} lg={2}>
-              <Item>xs=6 md=8</Item>
+              <Item />
             </Grid>
             <Grid item xs={6} lg={2}>
-              <Item>xs=6 md=8</Item>
+              <Item />
             </Grid>
           </Grid>
         </Container>
